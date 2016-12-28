@@ -49,12 +49,12 @@ const BaseListItem = props =>
     }
     <li style={listStyle}>
       { props.connectDragSource(
-        <span style={listItemStyle}>
+        <span>
           <HoverDisplay {...props} />
-          <span style={dotStyle} onClick={props.handleToggleList}>
-            {'◉\u00a0\u00a0'}
-          </span>
-          <span onClick={props.handleClick}>
+          <span style={listItemStyle} onClick={props.handleClick}>
+            <span style={dotStyle} onClick={props.handleToggleList}>
+              {'◉\u00a0\u00a0'}
+            </span>
             <Item {...props} />
           </span>
         </span>
